@@ -1,72 +1,85 @@
-import { useState } from 'react'
 import './App.css'
+
+/// corre nom run dev
+
 
 function App() {
   return (
     <div className="split-container">
-      {/* Left Side - Personal Info */}
-      <div className="left-side">
-        <header>
-          <pre className="ascii-art">
-{` ______ _______ _______ _______ _______ __  __ _______ 
-|   __ \\   |   |   |   |_     _|    ___|  |/  |   _   |
-|   __ <   |   |       | |   | |    ___|     <|       |
-|______/_______|__|_|__| |___| |_______|__|\__ |___|___|`}
-          </pre>
-          <h2>WE BUILD APPS</h2>
-          <p className="tagline">{">"} exploring the digital frontier_</p>
-        </header>
-
-        <section className="stats">
-          <div className="stat-box">
-            <span className="label">$ current_status</span>
-            <span className="value">building cool stuff</span>
-          </div>
-        </section>
-
-        <footer>
-          <p className="terminal-prompt">$ contact --info</p>
-          <div className="links">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github</a>
-            <span className="separator">|</span>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer">twitter</a>
-            <span className="separator">|</span>
-            <a href="mailto:your@email.com">email</a>
-          </div>
-        </footer>
+      <div className="menu-section">
+        <p className="menu-text">MANUAL</p>
+        <p className="menu-text">PROJECTS</p>
+        <p className="menu-text">CONTACT</p>
       </div>
 
-      {/* Right Side - Projects */}
-      <div className="right-side">
-        <section className="projects">
-          <h3>{">"} featured_projects</h3>
-          <div className="project-grid">
-            <div className="project-card">
-              <h4>Talking Apps</h4>
-              <p className="description">$ cat description.txt</p>
-              <p>Take notes and talk to them with AI</p>
-              <a 
-                href="https://notesai-app-v2-75d0f2db06df.herokuapp.com/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="project-link"
-              >
-                {">"} view_project
-              </a>
-            </div>
-            <div className="project-card">
-              <h4>Project_02</h4>
-              <p className="description">$ cat description.txt</p>
-              <p>Another awesome project in the works</p>
-            </div>
-            <div className="project-card">
-              <h4>Project_03</h4>
-              <p className="description">$ cat description.txt</p>
-              <p>Yet another amazing project</p>
-            </div>
+      <header>
+        <h1>BUMTEKA(7)</h1>
+        <h2>Digital Solutions Manual</h2>
+
+        <h2>NAME</h2>
+        <p>bumteka — digital solutions portfolio</p>
+
+        <h2>SYNOPSIS</h2>
+        <table>
+          <tbody>
+            <tr>
+              <td>web</td>
+              <td><a href="https://bumteka.com">bumteka.com</a></td>
+            </tr>
+            <tr>
+              <td>mail</td>
+              <td><a href="mailto:contact@bumteka.com">contact@bumteka.com</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>DESCRIPTION</h2>
+        <p>Building modern web applications and digital solutions. Focused on clean design and user experience.</p>
+      </header>
+
+      <main>
+        <p>These are some things we've done:</p>
+        
+        <div className="project-grid">
+          <div>
+            <a href="https://notesai-app-v2-75d0f2db06df.herokuapp.com/" className="project-link">
+              talking_apps
+            </a>
+            <p className="description">
+              a note-taking application with AI capabilities
+            </p>
           </div>
-        </section>
-      </div>
+
+          <div>
+            <a href="#" className="project-link">
+              project_02
+            </a>
+            <p className="description">
+              another solution in development
+            </p>
+          </div>
+
+          <div>
+            <a href="#" className="project-link">
+              project_03
+            </a>
+            <p className="description">
+              future development
+            </p>
+          </div>
+        </div>
+
+        <h2>SEE ALSO</h2>
+        <ul>
+          <li><a href="/about">about</a></li>
+          <li><a href="/contact">contact</a></li>
+          <li><a href="/blog">blog</a></li>
+        </ul>
+      </main>
+
+      <footer>
+        <p>June 16, 2024 Bumteka</p>
+      </footer>
     </div>
   )
 }

@@ -1,32 +1,46 @@
 :root {
-  --bg-color: #0a0a0a;
-  --text-color: #00ff00;
-  --accent-color: #00ff00;
-  --card-bg: #1a1a1a;
-  --hover-color: #00ff00;
-  --border-color: #1a1a1a;
+  --bg-color: #14130E;  /* Dark background */
+  --text-color: #B7A980; /* Light text */
+  --heading-color: #CC9528; /* Golden heading */
+  --link-color: #4C7B7F; /* Steel blue links */
+  --description-color: #7A7155;
+  --accent-color: #161510;
+  --card-bg: #4C4635; /* Slightly lighter background for cards */
+  --hover-color: #CCBC8E; /* Lighter color for hover */
+  --border-color: #727A18;
+}
+
+/* Reset and override index.css styles */
+html {
+  background-color: var(--bg-color) !important;
+  color-scheme: dark !important;
 }
 
 body {
   margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: 'Courier New', monospace;
-  line-height: 1.6;
-  height: 100vh;
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+  font-family: monospace !important;
+  line-height: 1.2 !important;
+  min-height: 100vh;
+  display: block !important;
+  place-items: initial !important;
+  padding: 1rem;
+  max-width: 80ch;
+  margin: 0 auto;
+  letter-spacing: -0.03em;
 }
 
 .split-container {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  height: 100vh;
-  overflow: hidden;
+  display: block;
+  max-width: 80ch;
+  margin: 0 auto;
 }
 
 /* Left Side Styles */
 .left-side {
-  padding: 2rem;
-  border-right: 1px solid var(--border-color);
+  padding: 0;
+  border: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,7 +50,7 @@ body {
 
 /* Right Side Styles */
 .right-side {
-  padding: 2rem;
+  padding: 0;
   overflow-y: auto;
   height: 100vh;
   box-sizing: border-box;
@@ -48,23 +62,46 @@ header {
   overflow-x: hidden;
 }
 
-h1 {
-  font-size: 2.5rem;
+/* Menu section at the top */
+.menu-section {
   margin: 0;
-  font-weight: bold;
+  padding: 0;
+  line-height: 1.1 !important;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-text {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color) !important;
+}
+
+/* Headers */
+h1, h2, h3, h4 {
+  color: var(--heading-color) !important;
+  font-weight: bold !important;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  font-family: monospace !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 1.4em !important;
+  margin-top: 0;
 }
 
 h2 {
-  color: var(--text-color);
-  font-weight: normal;
-  margin: 0.5rem 0;
-  opacity: 0.8;
+  font-size: 1.2em !important;
 }
 
 .tagline {
   font-size: 1.2rem;
   margin-top: 1rem;
-
 }
 
 @keyframes blink {
@@ -87,34 +124,34 @@ h2 {
 }
 
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.project-card {
-  background-color: var(--card-bg);
-  padding: 1.5rem;
-  border: 1px solid var(--text-color);
-  transition: all 0.3s ease;
-  position: relative;
-  
+.project-link {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.2rem;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+.project-link:hover {
+  text-decoration: underline;
 }
 
-.project-card h4 {
-  margin: 0 0 1rem 0;
-  color: var(--accent-color);
+/* Regular text */
+p {
+  margin: 0.5rem 0;
+  line-height: 1.2 !important;
 }
 
 .description {
-  opacity: 0.8;
+  color: var(--description-color) !important;
+  margin-left: 2rem;
   margin-bottom: 0.5rem;
+  font-size: 0.95em;
+  line-height: 1.2 !important;
 }
 
 footer {
@@ -127,39 +164,40 @@ footer {
   margin-bottom: 1rem;
 }
 
+.separator {
+  color: var(--heading-color);
+  margin: 0 0.5rem;
+}
+
+/* Links section */
 .links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+  margin-top: 2rem;
 }
 
 .links a {
-  color: var(--text-color);
+  color: var(--link-color);
   text-decoration: none;
-  transition: opacity 0.3s ease;
 }
 
 .links a:hover {
-  opacity: 0.7;
+  text-decoration: underline;
 }
 
-.separator {
-  opacity: 0.5;
+/* Table adjustments */
+table {
+  margin: 0.5rem 0;
+  line-height: 1.2 !important;
 }
 
-.project-link {
-  display: inline-block;
-  color: var(--text-color);
-  text-decoration: none;
-  margin-top: 1rem;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
+td {
+  padding-right: 1rem;
+  color: var(--text-color) !important;
+  line-height: 1.2 !important;
 }
 
-.project-link:hover {
-  border-bottom-color: var(--text-color);
-  opacity: 0.8;
+/* Remove card styles */
+.project-card {
+  display: none;
 }
 
 /* Responsive Design */
@@ -184,16 +222,44 @@ footer {
   }
 }
 
-/* ASCII ART */
+/* ASCII art adjustments */
 .ascii-art {
-  font-family: 'Courier New', monospace;
-  font-size: 0.55rem;
-  line-height: 1.3;
-  margin: 0;
-  padding: 1;
+  font-family: monospace;
   white-space: pre;
-  color: var(--text-color);
-  text-align: left;
-  overflow-x: auto;
-  max-width: 100%;
-  font-weight: bold; /* Added to make text bold */
+  margin: 0.5rem 0;
+  line-height: 1.1 !important;
+}
+
+/* Override any media queries from index.css */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+  }
+  
+  body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+  }
+  
+  a:hover {
+    color: var(--link-color) !important;
+  }
+}
+
+/* Override link styles from index.css */
+a, a:visited {
+  color: var(--link-color) !important;
+  text-decoration: none;
+  font-weight: normal !important;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-color) !important;
+}
+
+.section-title {
+  color: var(--heading-color) !important;
+  margin-bottom: 1rem;
+}
