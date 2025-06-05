@@ -29,11 +29,11 @@ function App() {
           <tbody>
             <tr>
               <td>web</td>
-              <td><a href="https://bumteka.com">bumteka.com</a></td>
+              <td><a href="https://bumteka.com">bumteka.io</a></td>
             </tr>
             <tr>
               <td>mail</td>
-              <td><a href="mailto:contact@bumteka.com">contact@bumteka.com</a></td>
+              <td><a href="mailto:bumtekateam@gmail.com">bumtekateam@gmail.com</a></td>
             </tr>
           </tbody>
         </table>
@@ -85,10 +85,10 @@ function App() {
       <footer>
         <div style={{ textAlign: 'center' }}>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src="https://cyber.dabamos.de/88x31/julesneohome.gif" alt="88x31 button" style={{ marginRight: '10px' }} />
-            <img src="http://textfiles.com/underconstruction/88x31/GEOCIT/dwnnaylor_SkullRoses_skull.gif" alt="88x31 skull roses" />
+            
+            
           </div>
-          <p>June 16, 2024 Bumteka</p>
+          <p>2025 Bumteka</p>
           
         </div>
       </footer>
