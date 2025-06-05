@@ -11,9 +11,14 @@ function App() {
         <p className="menu-text">PROJECTS</p>
         <p className="menu-text">CONTACT</p>
       </div>
+      <div className="html-text">
+        
+        
+       
+      </div>
 
       <header>
-        <h1>BUMTEKA(7)</h1>
+        <h1>BUMTEKA(7)</h1><p className="html-text"></p>
         <h2>Digital Solutions Manual</h2>
 
         <h2>NAME</h2>
@@ -78,7 +83,14 @@ function App() {
       </main>
 
       <footer>
-        <p>June 16, 2024 Bumteka</p>
+        <div style={{ textAlign: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <img src="https://cyber.dabamos.de/88x31/julesneohome.gif" alt="88x31 button" style={{ marginRight: '10px' }} />
+            <img src="http://textfiles.com/underconstruction/88x31/GEOCIT/dwnnaylor_SkullRoses_skull.gif" alt="88x31 skull roses" />
+          </div>
+          <p>June 16, 2024 Bumteka</p>
+          
+        </div>
       </footer>
     </div>
   )

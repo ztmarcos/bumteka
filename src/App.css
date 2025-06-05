@@ -1,40 +1,61 @@
 :root {
   --bg-color: #14130E;  /* Dark background */
   --text-color: #B7A980; /* Light text */
-  --heading-color: #CC9528; /* Golden heading */
+  --heading-color: #b68d3b; /* Golden heading */
   --link-color: #4C7B7F; /* Steel blue links */
   --description-color: #7A7155;
   --accent-color: #161510;
   --card-bg: #4C4635; /* Slightly lighter background for cards */
   --hover-color: #CCBC8E; /* Lighter color for hover */
   --border-color: #727A18;
+  --html-color:  #dcee0f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Reset and override index.css styles */
 html {
   background-color: var(--bg-color) !important;
   color-scheme: dark !important;
+  height: 100%;
+  overflow-y: auto;
 }
 
 body {
-  margin: 0;
   background-color: var(--bg-color) !important;
   color: var(--text-color) !important;
   font-family: monospace !important;
   line-height: 1.2 !important;
-  min-height: 100vh;
+  height: 100%;
   display: block !important;
-  place-items: initial !important;
   padding: 1rem;
   max-width: 80ch;
   margin: 0 auto;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.0em;
+  overflow-y: auto;
 }
 
 .split-container {
   display: block;
   max-width: 80ch;
   margin: 0 auto;
+  height: 100%;
+  overflow-y: auto;
 }
 
 /* Left Side Styles */
@@ -43,17 +64,13 @@ body {
   border: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  box-sizing: border-box;
+  height: auto;
 }
 
 /* Right Side Styles */
 .right-side {
   padding: 0;
-  overflow-y: auto;
-  height: 100vh;
-  box-sizing: border-box;
+  height: auto;
 }
 
 header {
@@ -64,12 +81,13 @@ header {
 
 /* Menu section at the top */
 .menu-section {
-  margin: 0;
+  margin: 0rem;
   padding: 0;
   line-height: 1.1 !important;
   margin-bottom: 1rem;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: left;
 }
 
 .menu-text {
@@ -78,21 +96,26 @@ header {
   color: var(--text-color) !important;
 }
 
+.html-text {
+  color: var(--html-color);
+}
+
+
 /* Headers */
 h1, h2, h3, h4 {
   color: var(--heading-color) !important;
-  font-weight: bold !important;
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
+  font-weight: 1000 !important;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   font-family: monospace !important;
-  line-height: 1.1 !important;
+  line-height: 1rem !important;
   letter-spacing: 0.02em;
 }
 
 h1 {
-  font-size: 1.4em !important;
-  margin-top: 0;
+  font-size: 2em !important;
+  margin-top: 1.5rem;
 }
 
 h2 {
